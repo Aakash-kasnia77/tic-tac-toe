@@ -70,12 +70,10 @@ export default function Game() {
       </div>
       <div className="game-info">
         <ol> </ol>
-
       </div>
     </div>
   )
 }
-
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
@@ -92,11 +90,6 @@ function calculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
-    
   }
-
-
   return null; 
-
-
 }
