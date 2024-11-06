@@ -24,12 +24,12 @@ function Board({xIsNext , squares , onPlay}) {
     setXIsNext(!xIsNext)
   }
   const winner = calculateWinner(squares);
-  let status;
-  if (winner) {
+  let status;   
+  if (winner) {   
     status = "Winner : " + winner;
     status = winner + " ,Is the Winner";
-  } else {
-    status = "Now Turn: " + (xIsNext ? "X" : "0");
+  } else {   
+    status = "Now Turn: "  + (xIsNext ? "X" : "0");
   }
   return (
     <>
