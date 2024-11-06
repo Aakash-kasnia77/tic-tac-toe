@@ -28,7 +28,7 @@ function Board({xIsNext , squares , onPlay}) {
   if (winner) {   
     status = "Winner : " + winner;
     status = winner + " ,Is the Winner";
-  } else {   
+  } else {    
     status = "Now Turn: "  + (xIsNext ? "X" : "0");
   }
   return (
@@ -38,7 +38,7 @@ function Board({xIsNext , squares , onPlay}) {
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
 
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-          
+
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
       </div>
       <div className="board-row">
@@ -92,6 +92,11 @@ function calculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
+    
   }
-  return null;
+
+
+  return null; 
+
+
 }
